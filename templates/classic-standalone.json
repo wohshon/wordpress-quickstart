@@ -21,7 +21,7 @@
         {
             "name": "QUICKSTART_REPOSITORY_URL",
             "description": "The URL of the quickstart Git repository.",
-            "value": "https://github.com/openshift-evangelists/wordpress-quickstart",
+            "value": "https://github.com/robinfoe/wordpress-quickstart",
             "required": true
         },
         {
@@ -227,40 +227,6 @@
                                         "memory": "${WORDPRESS_MEMORY_LIMIT}"
 				    }
                                 },
-				"readinessProbe": {
-				    "failureThreshold": 3,
-				    "httpGet": {
-					"path": "/wp-admin/install.php",
-					"port": 8080,
-					"scheme": "HTTP",
-					"httpHeaders": [
-					    {
-						"name": "X-Forwarded-Proto",
-						"value": "https"
-					    }
-					]
-				    },
-				    "periodSeconds": 10,
-				    "successThreshold": 1,
-				    "timeoutSeconds": 1
-				},
-				"livenessProbe": {
-				    "failureThreshold": 3,
-				    "httpGet": {
-					"path": "/wp-admin/install.php",
-					"port": 8080,
-					"scheme": "HTTP",
-					"httpHeaders": [
-					    {
-						"name": "X-Forwarded-Proto",
-						"value": "https"
-					    }
-					]
-				    },
-				    "periodSeconds": 10,
-				    "successThreshold": 1,
-				    "timeoutSeconds": 1
-				},
                                 "env": [
                                     {
                                         "name": "MYSQL_DATABASE",
