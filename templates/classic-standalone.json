@@ -21,7 +21,7 @@
         {
             "name": "QUICKSTART_REPOSITORY_URL",
             "description": "The URL of the quickstart Git repository.",
-            "value": "https://github.com/robinfoe/wordpress-quickstart",
+            "value": "https://github.com/wohshon/wordpress-quickstart",
             "required": true
         },
         {
@@ -33,7 +33,7 @@
         {
             "name": "WORDPRESS_VOLUME_TYPE",
             "description": "Type of the persistent volume for Wordpress.",
-            "value": "ReadWriteOnce",
+            "value": "ReadWriteMany",
             "required": true
         },
         {
@@ -454,7 +454,7 @@
             },
             "spec": {
                 "accessModes": [
-                    "ReadWriteOnce"
+                    "ReadWriteMany"
                 ],
                 "resources": {
                     "requests": {
